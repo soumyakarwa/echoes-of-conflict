@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Echoes of Conflict</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="content">
+      <div id="description">
+        <div id="title">Echoes of Conflict</div>
+        <div id="subtitle">
+          Tracing War Themes in a Century of State of the Union Addresses
+        </div>
+        <div id="writing">
+          The State of the Union address is a yearly speech delivered by the
+          President of the United States to Congress. It outlines the nation's
+          condition and sets forth the legislative agenda. "Echoes of Conflict,"
+          maps out the prevalence of war rhetoric in the State of the Union
+          addresses over the last century. Through a radial bar chart, each year
+          is represented by a bar, with the length indicating what proportion of
+          the speech was dedicated to discussing war. The design is
+          straightforward: longer bars signal more extensive talk of war, and
+          shorter bars, less so.
+        </div>
+        <div id="writing">
+          This data-driven approach provides a revealing look at how war has
+          ebbed and flowed as a subject in the annual addresses to Congress,
+          reflecting the nation's entanglement with international and domestic
+          conflicts over time. It's also interesting to look at the prevalence
+          of war themes when the United States has actually been at war: use the
+          buttons below to find out!
+        </div>
+        <div id="buttons-container">
+          <button id="worldWar1-button" data-checked="false">
+            World War I
+          </button>
+          <button id="worldWar2-button" data-checked="false">
+            World War II
+          </button>
+          <button id="koreanWar-button" data-checked="false">Korean War</button>
+          <button id="vietnamWar-button" data-checked="false">
+            Vietnam War
+          </button>
+          <button id="globalWOT-button" data-checked="false">
+            Global War on Terror
+          </button>
+        </div>
+      </div>
+      <div id="chart"></div>
+    </div>
+
+    <script src="./app.js" type="module" async></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+:root {
+  --margin: 2rem;
+  --title-fontsize: 3rem;
+  --title-fontweight: 600;
+  --subtitle-fontsize: 1.7rem;
+  --writing-fontsize: 1.1rem;
+  --body-font: "Eb-Garamond";
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: var(--body-font);
+  /* background-color: yellow; */
+  background-color: #1c1c20;
+}
+
+#chart {
+  margin-top: var(--margin);
+  margin-bottom: var(--margin);
+  margin-right: var(--margin);
+  height: 96%;
+  width: 63%;
+  /* background-color: pink; */
+}
+
+#description {
+  margin-top: var(--margin);
+  margin-bottom: var(--margin);
+  margin-left: var(--margin);
+  height: 96%;
+  width: 33%;
+  /* background-color: white; */
+  color: #fffeee;
+}
+
+#content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: var(--margin);
+}
+
+#title {
+  padding-left: var(--margin);
+  padding-right: var(--margin);
+  padding-top: var(--margin);
+  font-size: var(--title-fontsize);
+  font-weight: var(--title-fontweight);
+}
+
+#subtitle {
+  padding-left: var(--margin);
+  padding-right: var(--margin);
+  font-size: var(--subtitle-fontsize);
+  margin-bottom: calc(1.5 * var(--margin));
+}
+
+#writing {
+  padding-left: var(--margin);
+  padding-right: var(--margin);
+  font-size: var(--writing-fontsize);
+  margin-bottom: calc(var(--margin) / 2);
+}
+
+#buttons-container {
+  padding-top: calc(var(--margin));
+  font-family: var(--body-font);
+  padding-left: var(--margin);
+  padding-right: var(--margin);
+}
+
+#worldWar1-button,
+#worldWar2-button,
+#koreanWar-button,
+#vietnamWar-button,
+#globalWOT-button {
+  /* Styles for your buttons */
+  background-color: #fffeee;
+  border: none;
+  font-family: var(--body-font);
+  font-size: var(--writing-fontsize);
+  color: #1c1c20;
+  border-radius: 0;
+  padding: calc(0.1 * var(--margin));
+  margin: calc(0.1 * var(--margin));
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+@font-face {
+  font-family: "Eb-Garamond";
+  src: url("./assets/fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf");
+}
