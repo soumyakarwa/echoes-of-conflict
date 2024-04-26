@@ -2,6 +2,8 @@
 
 "Echoes of Conflict" is a qualitative data visualization project that scrutinizes the thematic presence of war in U.S. Presidential State of the Union Addresses from 1901 to the present. Utilizing a radial bar chart, this project illustrates the proportion of each address that Presidents dedicated to discussions of war. The visualization provides a clear, historical view of how war rhetoric correlates with periods of conflict, reflecting on the nation's legislative focus and international stance as articulated by its leaders.
 
+Check it out here: https://soumyakarwa.github.io/echoes-of-conflict/
+
 ---- Data Visualization ----
 
 Each State of the Union speech is quantified by a bar on the radial chart, with the bar's length representing the percentage of the speech pertaining to war. The visual contrast in bar lengths across the chart delivers an immediate sense of the prominence of war in presidential discourse over time. There are also buttons that highlight bars for the years the United States was actually at war (World War I, World War II, Korean War, Vietnam War, Global War on Terror)
