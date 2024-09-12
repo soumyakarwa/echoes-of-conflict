@@ -267,7 +267,6 @@ function addYearLabels(svg, analysis, xScale, yScale) {
  */
 function createRadialGridLines(svg, analysis, xScale, yScale) {
   const firstBarAngleDegrees = (((13.9 * 2 * Math.PI) / 16) * 180) / Math.PI;
-  console.log(firstBarAngleDegrees);
   const maxDataValue = d3.max(analysis, (d) => d.proportion);
 
   const roundedMax = Math.floor(maxDataValue / 10) * 10;
@@ -285,7 +284,13 @@ function createRadialGridLines(svg, analysis, xScale, yScale) {
       "transform",
       (d) =>
         `rotate(${firstBarAngleDegrees}) translate(${Constants.innerRadius},${Constants.barHeight})`
-    );
+    )
+    .transition() // Start the transition
+    .on("end", function () {
+      // This will now trigger after the transition completes
+      const axisTitle = document.getElementById("axis-title");
+      axisTitle.style.opacity = 1; // Set opacity to 1
+    });
 
   const gridLines = svg
     .selectAll("circle.grid-line")

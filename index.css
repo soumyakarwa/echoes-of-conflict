@@ -15,6 +15,21 @@ body {
   background-color: #1c1c20;
 }
 
+#axis-title {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: var(--margin);
+  padding-top: var(--margin);
+  padding-right: var(--margin);
+  color: white;
+  font-size: var(--writing-fontsize);
+  max-width: 10%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  text-align: center;
+}
+
 #chart {
   margin-top: var(--margin);
   margin-bottom: var(--margin);
