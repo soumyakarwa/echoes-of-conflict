@@ -35,7 +35,34 @@ const fetchData = async () => {
 
 const data = await fetchData();
 
+// let totalWords = 0;
+// data.forEach((d) => {
+//   totalWords += d.speech.split(" ").length;
+//   console.log(d.speech.split(" ").length, totalWords);
+// });
+
+// console.log(totalWords / data.length);
+
 const analysis = [];
+
+const svg = d3
+  .select("#chart")
+  .append("svg")
+  .attr("width", width)
+  .attr("height", height)
+  .attr("viewBox", `0 0 ${width} ${height}`)
+  .append("g")
+  .attr("transform", `translate(${width / 2}, ${height / 2 - 50})`);
+
+const spinnerDimensions = 100;
+
+const spinner = svg
+  .append("image")
+  .attr("xlink:href", "./assets/spinner.gif")
+  .attr("width", spinnerDimensions)
+  .attr("height", spinnerDimensions)
+  .attr("x", -spinnerDimensions / 2)
+  .attr("y", -spinnerDimensions / 2);
 
 data.forEach((d) => {
   const sentences = RiTa.sentences(d.speech);
@@ -53,15 +80,6 @@ data.forEach((d) => {
   });
 });
 
-console.log(analysis);
-
-const svg = d3
-  .select("#chart")
-  .append("svg")
-  .attr("width", width)
-  .attr("height", height)
-  .attr("viewBox", `0 0 ${width} ${height}`)
-  .append("g")
-  .attr("transform", `translate(${width / 2}, ${height / 2 - 50})`);
+spinner.remove();
 
 const visualization = createVisualization(svg, analysis, outerRadius);
